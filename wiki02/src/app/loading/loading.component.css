@@ -1,0 +1,12 @@
+
+.loading-text {
+  font-family: 'lato';
+  text-align: center;
+  color: green;
+}
+
+.error-text {
+  font-family: 'lato';
+  text-align: center;
+  color: indianred;
+}

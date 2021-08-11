@@ -1,0 +1,11 @@
+/* You can add global styles to this file, and also import other style files */
+body {
+  background-color: #F7F8F9;
+  display: flex;
+  justify-content: center;
+  padding: 1%;
+}
+.searchmatch {
+  text-decoration: underline;
+  color: red;
+}

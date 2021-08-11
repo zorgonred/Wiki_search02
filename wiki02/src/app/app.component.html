@@ -1,0 +1,39 @@
+<div class="content" role="main">
+
+  <div class="card">
+    <h1>Wikipedia Search and Replace</h1>
+    <h4>Search Wikipedia by typing a phrase below.</h4>
+
+    <p class="title">SEARCH PHRASE</p>
+    <input
+      [(ngModel)]="searchPhrase" (ngModelChange)="getSearchResultFromWikipediaWithDelay(searchPhrase)" type="text" id="search"
+      placeholder="Search Wikipedia" required>
+
+    <button type="button" (click)="getSearchResultFromWikipedia(searchPhrase)" id="search-button">Search</button>
+
+    <p class="title">REPLACE WITH</p>
+    <input [(ngModel)]="replacement" type="text" id="replace" placeholder="Replacement" required>
+
+    <button type="button" (click)="replaceFirstOccurrence(replacement)" id="replace-button">Replace</button>
+
+    <button type="button" (click)="replaceAll(replacement)" id="replace-all-button">Replace All</button>
+
+
+    <div>
+      <div *ngFor="let entry of entries; let i = index;" class="card-results">
+
+
+        <h4>{{entry['title'] }}</h4>
+
+        <p [innerHTML]="entry['snippet']"></p>
+
+
+      </div>
+    </div>
+
+  </div>
+
+
+</div>
+
+<app-loading></app-loading>
